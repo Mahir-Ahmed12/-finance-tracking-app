@@ -1,0 +1,6 @@
+{
+  "name": "NEONVAULT — Futuristic Personal Finance",
+  "description": "Futuristic personal finance management system and cybernetic financial operating system. Control your money, design your future.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

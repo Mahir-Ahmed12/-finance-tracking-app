@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Manrope', 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Light Theme (Default) */
+    --bg-main: #F5F5F3;
+    --bg-card: #FFFFFF;
+    --text-primary: #171717;
+    --text-secondary: #777777;
+    --border-color: #EAEAE7;
+    --accent: #A3B18A;
+    --income: #2D6A4F;
+    --expense: #BC4749;
+  }
+
+  .dark {
+    /* Minimalist Charcoal Dark Theme */
+    --bg-main: #121316;
+    --bg-card: #1C1D21;
+    --text-primary: #EDEDED;
+    --text-secondary: #8E8E93;
+    --border-color: #2A2B30;
+    --accent: #A3B18A;
+    --income: #40916C;
+    --expense: #C85A5A;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.011em;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
+  .font-mono-numbers {
+    font-family: var(--font-mono);
+    font-feature-settings: "tnum" 1, "zero" 1;
+  }
+}
+
+/* Minimalist Card & Container Elements */
+.min-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.min-card:hover {
+  border-color: #D6D6D2;
+}
+
+.dark .min-card:hover {
+  border-color: #383A42;
+}
+
+/* Backwards-compatibility aliases for cyber-card to smoothly render in minimalist theme */
+.cyber-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: border-color 150ms ease;
+}
+
+.cyber-card:hover {
+  border-color: #D6D6D2;
+}
+
+.dark .cyber-card:hover {
+  border-color: #383A42;
+}
+
+/* Minimalist input and form styles */
+input, select, textarea {
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+/* Minimal subtle scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D8D4;
+  border-radius: 10px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #2E3036;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BCBCB6;
+}
